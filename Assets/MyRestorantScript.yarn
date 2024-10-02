@@ -1,0 +1,80 @@
+﻿title: Start
+position: 253,-493
+---
+Crew Member: Hi there! Welcome to EatMe Resto. What do you want to order today?
+
+-> Costomer: I want to have a Burger
+    Crew Member: Okay, A Burger
+    <<jump Burger>>
+-> Costomer: I want to have a Sandwich
+    Crew Member: Cool, A Sandwich
+    <<jump Sandwich>>
+->  Costomer: I want to have a Salad   
+    Crew Member: Alright, A Salad
+    <<jump Salad>>
+
+===
+title: Burger
+position: -543,-47
+---
+Crew Member: Would you like to add any toppings?
+-> Costomer: Yes
+    Crew Member: Nice! It's a Great Choice! We are Preparing your Order Plaese wait 5 min
+-> Costomer: No
+    Crew Member: Oh, Okay! We are Preparing your Order Plaese wait 5 min
+
+<<jump More>>
+===
+title: Sandwich
+position: -160,-35
+---
+Crew Membern: Would you like to add any condiments?
+-> Costomer: Yes.
+    Crew Member: Great, let's go! We are Preparing your Order Plaese wait 5 min
+-> Costomer: No.
+    Crew Member: Cool! We are Preparing your Order Plaese wait 5 min
+
+<<jump More>>
+===
+
+title: Salad
+position: 328,-32
+---
+Crew Membern: Would you like to add any proteins?
+-> Costomer: Yes.
+    Crew Member: Great Choice! We are Preparing your Order Plaese wait 5 min
+-> Costomer: No.
+    Crew Member: Okay! We are Preparing your Order Plaese wait 5 min
+
+<<jump More>>
+===
+
+
+
+
+
+
+
+
+
+
+
+title: More
+position: -198,603
+---
+Crew Membern: Would you like add some more  items?
+
+-> Costomer: Yes.
+    <<jump Start>>
+->Costomer:  No.
+    <<jump Done>>
+===
+
+
+
+
+title: Done
+position: 66,779
+---
+Costomer: Sounds good!
+===
