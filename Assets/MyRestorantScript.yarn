@@ -2,6 +2,9 @@
 position: 253,-493
 ---
 Crew Member: Hi there! Welcome to EatMe Resto. What do you want to order today?
+Costomer: What do you have ?
+
+CrewcMember: Here is our today's menu.
 
 -> Costomer: I want to have a Burger
     Crew Member: Okay, A Burger
@@ -12,6 +15,11 @@ Crew Member: Hi there! Welcome to EatMe Resto. What do you want to order today?
 ->  Costomer: I want to have a Salad   
     Crew Member: Alright, A Salad
     <<jump Salad>>
+->Costomer: Do you Have  any other food?
+  Crew Member: SORRY Sir We  only have Burger, Sandwich and Salad today.
+    <<jump Sorry>>
+
+
 
 ===
 title: Burger
@@ -19,10 +27,9 @@ position: -543,-47
 ---
 Crew Member: Would you like to add any toppings?
 -> Costomer: Yes
-    Crew Member: Nice! It's a Great Choice! We are Preparing your Order Plaese wait 5 min
+    Crew Member: Nice! It's a Great Choice! 
 -> Costomer: No
-    Crew Member: Oh, Okay! We are Preparing your Order Plaese wait 5 min
-
+    Crew Member: Oh, Okay! 
 <<jump More>>
 ===
 title: Sandwich
@@ -30,9 +37,9 @@ position: -160,-35
 ---
 Crew Membern: Would you like to add any condiments?
 -> Costomer: Yes.
-    Crew Member: Great, let's go! We are Preparing your Order Plaese wait 5 min
+    Crew Member: Great, let's go!
 -> Costomer: No.
-    Crew Member: Cool! We are Preparing your Order Plaese wait 5 min
+    Crew Member: Cool! 
 
 <<jump More>>
 ===
@@ -42,9 +49,9 @@ position: 328,-32
 ---
 Crew Membern: Would you like to add any proteins?
 -> Costomer: Yes.
-    Crew Member: Great Choice! We are Preparing your Order Plaese wait 5 min
+    Crew Member: Great Choice! 
 -> Costomer: No.
-    Crew Member: Okay! We are Preparing your Order Plaese wait 5 min
+    Crew Member: Okay! 
 
 <<jump More>>
 ===
@@ -67,14 +74,33 @@ Crew Membern: Would you like add some more  items?
 -> Costomer: Yes.
     <<jump Start>>
 ->Costomer:  No.
-    <<jump Done>>
+    <<jump Wait>>
 ===
 
 
 
 
+title: Wait
+position: 66,779
+---
+CrewcMember: We are Preparing your Order Please wait 5 Min
+
+<<jump Done>>
+===
+
+
 title: Done
 position: 66,779
 ---
-Costomer: Sounds good!
+CrewcMember: Your Order is Ready Sir, Thank you For  Your Order.
+
+===
+
+
+title: Sorry
+position: 66,779
+---
+Costomer: Okay I am  going to leave now.
+
+
 ===
